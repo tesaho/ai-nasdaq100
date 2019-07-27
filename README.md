@@ -8,28 +8,34 @@ This paper is a continuation of the study done by Qin et al[2] in capturing corr
 
 ![ST-RNN](pictures/st-rnn.png)
 
-![image_captioning](pictures/image_captioning.png)
+![CNN-LSTM](pictures/image_captioning.png)
 
 The dataset is the original small dataset used in the DA-RNN papers[2] and includes 105 days worth of 1-minute OHLC bars of stock data from July 26, 2016 to December 22, 2016.  Each day contains 390 data points except for November 25 (210 datapoints) and December 22 (180 data points).  The annual index rebalance announcement was released on December 9, 2016 and four out of the 81 companies were dropped from the price index.  There is a visibile price jump towards the end of the test set reflecting this change.
 
 #### Download dataset
 
+The dataset is provided in:
+
+    $ cd ai_nasdaq100/data/
+
 
 ## Installation
 ##### Clone and install requirements
-    $ git clone https://github.com/tesaho/index_prediction
-    $ cd index_prediction/
+    $ git clone https://github.com/tesaho/ai_nasdaq100
+    $ cd ai_nasdaq100/
     $ sudo pip3 install -r requirements.txt
 
 ### Running test code
+
+Example of the test code can be found in example_cnn_lstm.ipynb.
 
 
 ## Credits
 #### Authors
 
-1) Grob W., Lange S., Bodecker J., Blum M., "Predicting Time Series with Space-Time Convolutional and Recurrent Neural NetworksContributing".  ESANN 2017 proceedings, European Symposium on Artificial Neural Networks, Computational Intelligence and Machine Learning. Bruges (Belgium), 26-28 April 2017. 
+1) Grob W., Lange S., Bodecker J., Blum M., ["Predicting Time Series with Space-Time Convolutional and Recurrent Neural NetworksContributing"] (https://pdfs.semanticscholar.org/4cdb/48495ec19b7f835887d1d10f7d20a34ba29d.pdf).  ESANN 2017 proceedings, European Symposium on Artificial Neural Networks, Computational Intelligence and Machine Learning. Bruges (Belgium), 26-28 April 2017. 
 
-2) Qin Y., Song D., Cheng H., Cheng W., Jiang G., Cottrell G., "A Dual-Stage Attention Based Recurrent Neural Network for Time Series Prediction".  International Joint Conference on Artificial Intelligence (IJCAI), 2017.
+2) Qin Y., Song D., Cheng H., Cheng W., Jiang G., Cottrell G., ["A Dual-Stage Attention Based Recurrent Neural Network for Time Series Prediction"](https://arxiv.org/pdf/1704.02971.pdf).  International Joint Conference on Artificial Intelligence (IJCAI), 2017.
 
 3) Zuo, Chandler.  ["A PyTorch Example to use RNN for Financial Prediction"](https://github.com/chandlerzuo/chandlerzuo.github.io/tree/master/codes/da_rnn)
 
